@@ -55,45 +55,34 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      // This call to setState tells the Flutter framework that something has
-      // changed in this State, which causes it to rerun the build method below
-      // so that the display can reflect the updated values. If we changed
-      // _counter without calling setState(), then the build method would not be
-      // called again, and so nothing would appear to happen.
-      _counter++;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
-    // This method is rerun every time setState is called, for instance as done
-    // by the _incrementCounter method above.
-    //
-    // The Flutter framework has been optimized to make rerunning build methods
-    // fast, so that you can just rebuild anything that needs updating rather
-    // than having to individually change instances of widgets.
     return SafeArea(
-      child: Scaffold(
-        body: Container(
-          decoration: BoxDecoration(
-            color: Colors.lightBlueAccent,
-            border: Border.all(
-              width: 4,
-            ),
-            borderRadius: BorderRadius.circular(25),
+        child: Scaffold(
+      body: Column(
+        children: [
+          Row(
+            children: [
+              Image.asset('assets/images/user_profile.png'),
+              SizedBox(height: 8,width: 8,),
+              const Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    "Hey Pungjung,",
+                    style: TextStyle(fontSize: 14),
+                  ),
+                  Text(
+                    "Ready to order?",
+                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700),
+                  )
+                ],
+              )
+            ],
           ),
-          margin: EdgeInsets.only(left: 15),
-          padding: EdgeInsets.only(right: 15),
-          child: Text(
-            "Ying",
-            style: TextStyle(fontSize: 50, color: Colors.purple),
-          ),
-        ),
+        ],
       ),
-    );
+    ));
   }
 }
