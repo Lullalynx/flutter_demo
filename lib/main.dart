@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project/detail.dart';
 
 import 'data/category_list.dart';
 import 'data/category_data.dart';
@@ -63,6 +64,14 @@ class _MyHomePageState extends State<MyHomePage> {
               },
             ),
           ),
+
+          Center(
+              child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Detail()));
+                  },
+                  child: Text("Go to next page")))
         ],
       )),
     );
