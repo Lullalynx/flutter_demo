@@ -68,7 +68,7 @@ class Detail extends StatelessWidget {
   }
 }
 
-
+//will be back
       child: Container(
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(6),
